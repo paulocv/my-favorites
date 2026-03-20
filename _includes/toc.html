@@ -1,0 +1,15 @@
+{% assign sorted_picks = site.picks | sort: "title" %}
+{% if sorted_picks.size > 0 %}
+<ol class="pick-toc">
+  {% for pick in sorted_picks %}
+    <li>
+      <a href="{{ pick.url | relative_url }}">{{ pick.title }}</a>
+      {% if pick.summary %}
+        <p>{{ pick.summary }}</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p>No picks yet. Add a Markdown file to the <code>_picks</code> folder to get started.</p>
+{% endif %}

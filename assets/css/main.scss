@@ -1,0 +1,166 @@
+---
+---
+
+:root {
+  --bg: #f7f5ef;
+  --paper: #fffdf8;
+  --ink: #1f2933;
+  --muted: #5b6770;
+  --accent: #005f73;
+  --accent-soft: #d9efe8;
+  --border: #d7d1c4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top right, rgba(0, 95, 115, 0.08), transparent 30%),
+    linear-gradient(180deg, #f2efe5 0%, var(--bg) 100%);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.wrap {
+  width: min(100% - 2rem, 52rem);
+  margin: 0 auto;
+}
+
+.site-header,
+.site-footer {
+  background: rgba(255, 253, 248, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.site-header .wrap,
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.site-title a,
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-main {
+  padding: 3rem 0;
+}
+
+.page,
+.pick {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.06);
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lede {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.pick-toc {
+  padding-left: 1.25rem;
+}
+
+.pick-toc li + li {
+  margin-top: 1rem;
+}
+
+.pick-toc p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  background: #efe9db;
+}
+
+@media (max-width: 640px) {
+  .site-header .wrap,
+  .site-footer .wrap,
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page,
+  .pick {
+    padding: 1.25rem;
+  }
+}

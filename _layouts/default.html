@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="wrap">
+          <p class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></p>
+          {% include nav.html %}
+        </div>
+      </header>
+
+      <main class="site-main">
+        <div class="wrap">
+          {{ content }}
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="wrap">
+          <p>Built with Jekyll and GitHub Pages.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
