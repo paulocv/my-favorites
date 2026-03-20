@@ -1,4 +1,8 @@
-<img src="{{ .Destination | safeURL }}"
+{{- $src := .Destination -}}
+{{- if hasPrefix $src "/" -}}
+  {{- $src = $src | relURL -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}"
   {{- with .PlainText }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
 >
