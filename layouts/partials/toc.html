@@ -1,0 +1,15 @@
+{{ $picks := where .Site.RegularPages.ByTitle "Section" "picks" }}
+{{ if gt (len $picks) 0 }}
+  <ol class="pick-toc">
+    {{ range $picks }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Params.summary }}
+          <p>{{ . }}</p>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ol>
+{{ else }}
+  <p>No picks yet. Add a Markdown file to the <code>content/picks</code> folder to get started.</p>
+{{ end }}
