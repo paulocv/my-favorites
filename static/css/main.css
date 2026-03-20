@@ -143,6 +143,15 @@ a:hover {
   font-size: 1.04rem;
 }
 
+.page-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+}
+
+
 .eyebrow {
   margin: 0 0 0.4rem;
   color: var(--accent);
