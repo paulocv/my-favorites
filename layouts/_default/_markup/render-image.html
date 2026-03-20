@@ -1,6 +1,6 @@
 {{- $src := .Destination -}}
 {{- if hasPrefix $src "/" -}}
-  {{- $src = $src | relURL -}}
+  {{- $src = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" $src) -}}
 {{- end -}}
 <img src="{{ $src | safeURL }}"
   {{- with .PlainText }} alt="{{ . }}"{{ end -}}
