@@ -31,7 +31,7 @@ Only files inside `content/` become pages, so `README.md` stays as repository do
 ## Local preview
 
 1. Install Hugo `0.134.0` or a compatible newer version.
-2. Run `hugo server`.
+2. Run `hugo server --config hugo.yaml,hugo.local.yaml` for local development at `http://localhost:1313/`.
 3. Open the local address shown in the terminal.
 
 ## What this example shows
