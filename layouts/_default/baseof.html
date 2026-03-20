@@ -7,7 +7,7 @@
     <div class="site-shell">
       <header class="site-header">
         <div class="wrap">
-          <p class="site-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
+          <p class="site-title"><a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a></p>
           {{ partial "nav.html" . }}
         </div>
       </header>
