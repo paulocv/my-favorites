@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <article class="pick">
+    <header class="page-header">
+      <p class="eyebrow">Favorite Pick</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}
+        <p class="lede">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.tags }}
+        <ul class="tag-list" aria-label="Tags">
+          {{ range . }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </header>
+
+    <div class="page-content">
+      {{ .Content }}
+    </div>
+
+    <p><a href="{{ "/" | relURL }}">Back to all picks</a></p>
+  </article>
+{{ end }}

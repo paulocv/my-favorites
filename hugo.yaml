@@ -1,0 +1,18 @@
+baseURL: https://paulocv.github.io/my-favorites/
+languageCode: en-us
+title: Favorite Aircraft Picks
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  description: A small Hugo site for sharing favorite aircraft.
+
+menu:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 10
+    - name: About
+      pageRef: /about
+      weight: 20

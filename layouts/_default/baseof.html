@@ -1,26 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% include head.html %}
+    {{ partial "head.html" . }}
   </head>
   <body>
     <div class="site-shell">
       <header class="site-header">
         <div class="wrap">
-          <p class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></p>
-          {% include nav.html %}
+          <p class="site-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
+          {{ partial "nav.html" . }}
         </div>
       </header>
 
       <main class="site-main">
         <div class="wrap">
-          {{ content }}
+          {{ block "main" . }}{{ end }}
         </div>
       </main>
 
       <footer class="site-footer">
         <div class="wrap">
-          <p>Built with Jekyll and GitHub Pages.</p>
+          <p>Built with Hugo and GitHub Pages.</p>
         </div>
       </footer>
     </div>
