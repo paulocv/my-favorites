@@ -1,0 +1,4 @@
+<img src="{{ .Destination | absURL }}" alt="{{ .PlainText }}"
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+>
+{{- /* chomp trailing newline */ -}}
