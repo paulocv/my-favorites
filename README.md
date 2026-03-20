@@ -1,5 +1,7 @@
 # Favorite Aircraft Picks
 
+View the website: [paulocv.github.io/my-favorites/](https://paulocv.github.io/my-favorites/)
+
 Example repository for a short course on Git and GitHub for scientists.
 
 This site is built with Jekyll and designed to be deployed with GitHub Pages using GitHub Actions.
