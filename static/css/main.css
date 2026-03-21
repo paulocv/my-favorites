@@ -1,6 +1,6 @@
 :root {
   --bg: #dff3f0;
-  --bg-deep: #c3e6e1;
+  --bg-deep: #89d5e8;
   --paper: rgba(255, 255, 255, 0.8);
   --paper-strong: #fcfffe;
   --ink: #17343a;
@@ -52,7 +52,7 @@ a:hover {
 }
 
 .site-header {
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   z-index: 10;
   border-bottom: 1px solid var(--border);
