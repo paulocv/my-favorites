@@ -1,6 +1,9 @@
-# Favorite Aircraft Picks
+# My Favorite Picks
 
 View the website: [paulocv.github.io/my-favorites/](https://paulocv.github.io/my-favorites/)
+
+> [!NOTE]
+> Modify the URL above to that of your website created with GitHub pages.
 
 Example repository for a short course on Git and GitHub for scientists.
 
@@ -16,6 +19,17 @@ In this repository on GitHub, click the "Use this template" green button on the 
 Once you have your own version, you can clone it locally and make changes using git. 
 
 This project uses [hugo](https://gohugo.io/) to create a website. Before publishing it with GitHub pages (**required**), you must edit the `hugo.yaml` file. Replace the URL on `baseURL` with your own `https://[_username_].github.io/[_repo-name_]/`. This will also be the address of your website once published to GitHub Pages. You can optionally change the website name by editing the `title` field.
+
+
+## Editing and previewing locally
+
+You are encouraged to clone your own version of this repository to you local machine, so you can practice git locally and track your progress with commands like `git status`, `add`, `commit` and `push`.
+
+It is possible to live-preview your changes as you make changes offline. To achieve this, you will have to setup and run a hugo server:
+
+1. Install Hugo `0.134.0` or a compatible newer version. Tip: if you have conda, install it with `conda install conda-forge::hugo`. Otherwise check [https://gohugo.io/](https://gohugo.io/) for instructions.
+2. From a terminal opened in the root directory of your local repo, run `hugo server --config hugo.yaml,hugo.local.yaml`.
+3. Open the local address shown in the terminal. Most likely it will be [http://localhost:1313/](http://localhost:1313/). This will lead you to the offline preview of your website.
 
 
 ## Editing content
@@ -46,15 +60,6 @@ The home page table of contents updates automatically from the collection.
 Only files inside `content/` become pages, so `README.md` stays as repository documentation and is not rendered as part of the website.
 
 
-## Editing and previewing locally
-
-You are encouraged to clone your own version of this repository to you local machine, so you can practice git locally and track your progress with commands like `git status`, `add`, `commit` and `push`.
-
-It is possible to live-preview your changes as you make local changes. To achieve this, you will have to setup and run a hugo server:
-
-1. Install Hugo `0.134.0` or a compatible newer version.
-2. Run `hugo server --config hugo.yaml,hugo.local.yaml` for local development at `http://localhost:1313/`.
-3. Open the local address shown in the terminal.
 
 
 ## Advanced editing
